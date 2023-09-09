@@ -1,12 +1,19 @@
 package com.TestProject.Model;
 
-public record Employee(int id, String name, String email) {
+public record Employee(String nid, String carRegis, String bankAccount) {
 
-    public Employee(int id, String name, String email){
-        if(id==0) throw new IllegalStateException("Id can't be 0");
-        this.id = id;
-        this.email = email;
-        this.name = name;
+    public Employee(String nid, String carRegis, String bankAccount){
+
+
+        try {
+            if(nid.equals(0)&&carRegis.equals(0)&&bankAccount.equals(0))
+        }
+        catch (
+                throw
+        )
+        this.nid = nid;
+        this.carRegis = carRegis;
+        this.bankAccount = bankAccount;
 
     }
 }

@@ -10,8 +10,8 @@ public class TestProjectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TestProjectApplication.class, args);
-		Employee employee1 = new Employee(0, "Nazrul","nazrul@gmail.com");
-		System.out.println(employee1);
+//		Employee employee1 = new Employee(, "Nazrul","nazrul@gmail.com");
+//		System.out.println(employee1);
 
 		System.out.println("Run Successfully");
 	}
