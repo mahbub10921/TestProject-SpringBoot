@@ -29,7 +29,7 @@ public class StudentController {
         studentRepository.save(student);
     }
 
-    @GetMapping("/student")
+    @GetMapping("/students")
     public List<Student> getAllStudent(){
         List studentList = new ArrayList();
        studentList =  studentRepository.findAll();
@@ -46,7 +46,7 @@ public class StudentController {
 
     @GetMapping("/student/{firstname}")
     public List<Student> getByFirstNam(@PathVariable("firstname") String firstname){
-return studentRepository.getByFirstName(firstname);
+return studentRepository.getAllByFirstName(firstname);
     }
 
     @GetMapping("/student2/{lastname}")
@@ -58,4 +58,17 @@ return studentRepository.getByFirstName(firstname);
     public List<Student> findByIndex(@PathVariable("firstname") String firstname, @PathVariable("lastname") String lastname){
         return studentRepository.findByIndex(firstname, lastname);
     }
+
+    @GetMapping("/studentMail/{email}")
+    ResponseEntity<String> checkByMail(@PathVariable("email") String email){
+       boolean check = studentRepository.isExistByEmail(email);
+      if (check) {
+          return  ResponseEntity.ok("Student with email '" + email + "' Exists");
+      }
+      else {
+          return ResponseEntity.notFound().build();
+      }
+
+    }
 }
+
