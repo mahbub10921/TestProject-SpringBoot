@@ -1,7 +1,6 @@
 package com.TestProject.Controller;
 
-import com.TestProject.Model.Login;
-import com.TestProject.Model.Student;
+import com.TestProject.model.Login;
 import com.TestProject.Repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

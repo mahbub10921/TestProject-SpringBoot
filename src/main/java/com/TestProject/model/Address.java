@@ -1,4 +1,4 @@
-package com.TestProject.Model;
+package com.TestProject.model;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

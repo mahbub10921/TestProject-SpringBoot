@@ -1,8 +1,7 @@
 package com.TestProject.Controller;
 
-import com.TestProject.Model.Address;
-import com.TestProject.Model.ResponseMessage;
-import com.TestProject.Model.Student;
+import com.TestProject.model.ResponseMessage;
+import com.TestProject.model.Student;
 import com.TestProject.Repository.AddressRepository;
 import com.TestProject.Repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,8 +23,8 @@ public class StudentController {
     private AddressRepository addressRepository;
 
 
-    @PostMapping("/student")
-    public void saveStudent(@RequestBody Student student){
+    @PostMapping("/signup")
+    public void saveStudent(@RequestBody @Valid Student student){
         System.out.println("Heloooooooooooooo");
         studentRepository.save(student);
     }
