@@ -1,4 +1,4 @@
-package com.TestProject.Model;
+package com.TestProject.model;
 
 public class ResponseMessage {
     private String message;

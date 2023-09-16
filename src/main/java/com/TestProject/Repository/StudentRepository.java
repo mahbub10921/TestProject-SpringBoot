@@ -1,6 +1,6 @@
 package com.TestProject.Repository;
 
-import com.TestProject.Model.Student;
+import com.TestProject.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
